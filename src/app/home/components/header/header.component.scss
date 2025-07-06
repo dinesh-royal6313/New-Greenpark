@@ -1,0 +1,140 @@
+// ---------------------------------------------------------------------------------------
+// .header {
+//     box-shadow: 5px 5px 20px gray;
+//     width: 100%;
+//     background-color: #1c1c1c;
+//   }
+  
+//   .brand h1 {
+//     font-size: 1.5rem;
+//     margin: 0;
+//   }
+  
+//   .search-wrapper {
+//     min-width: 250px;
+//     max-width: 600px;
+//     flex: 1;
+//   }
+  
+//   .category-dropdown {
+//     max-width: 130px;
+//   }
+  
+//   .login-container {
+//     font-size: 0.9rem;
+//     a {
+//       color: white;
+//       text-decoration: none;
+//     }
+//     .user-icon {
+//       font-size: 1.5rem;
+//     }
+//   }
+
+//   .user-container {
+//     color: white;
+//     display: inline-block;
+//     width: 15em;
+//     margin: 1.5em 0.2em 0 1.5em;
+// }
+
+// .user-dropdown {
+//     background-color: #212529;
+//     width: 11em;
+//     z-index: 1000;
+//     position: absolute;
+// }
+
+// .user-dropdown-button {
+//     background-color: #212529;
+//     border-color: #212529;
+// }
+  
+//   .cart-wishlist {
+//     font-size: 1.5rem;
+//   }
+// --------------------------------------------------------------------
+.header {
+  width: 100%;
+  background-color: #1c1c1c;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.search-wrapper {
+  min-width: 250px;
+  max-width: 600px;
+  flex: 1;
+}
+
+.category-dropdown {
+  max-width: 130px;
+}
+
+.login-container,
+.user-container {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .user-icon {
+    font-size: 1.5rem;
+  }
+}
+
+.user-dropdown-button {
+  background-color: #212529;
+  border-color: #212529;
+  cursor: pointer;
+  // color: white;
+}
+
+.user-dropdown {
+  position: relative;
+
+  .dropdown-menu {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 10rem;
+    padding: 0;
+
+    .dropdown-item {
+      color: white;
+      padding: 10px 16px;
+
+      &:hover {
+        background-color: #495057;
+        color: #ffc107;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.cart-wishlist {
+  font-size: 1.5rem;
+
+  .badge {
+    font-size: 0.75rem;
+  }
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+  

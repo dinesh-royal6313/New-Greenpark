@@ -1,0 +1,205 @@
+<!-- <div class="header bg-dark">
+  <div class="row">
+    <div class="brand my-1">
+      <h1>New Green Park</h1>
+    </div>
+
+    <div class="p-0 my-4 w-50 h-25 bg-white">
+      <ng-container *ngIf="displaySearch">
+        <select #categoryOptions class="dropdown p-0 m-0">
+          <option
+            *ngFor="let category of categoryStore.topLevelCategories$ | async"
+            value="{{ category.id }}"
+          >
+            {{ category.category }}
+          </option>
+        </select>
+        <input
+          #keyword
+          class="form-control search-box"
+          placeholder="Search..."
+        />
+        <button
+          (click)="onClickSearch(keyword.value, categoryOptions.value)"
+          class="search-button"
+        >
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
+      </ng-container>
+    </div>
+
+    <div class="login-container p-0" *ngIf="!isUserAuthenticated">
+      <fa-icon class="user-icon" [icon]="faUserCircle"></fa-icon>
+      <h5><a routerLink="login">Sign in / Join</a></h5>
+    </div>
+
+    <div class="user-container p-0" *ngIf="isUserAuthenticated">
+      <div class="dropdown user-dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle user-dropdown-button"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <fa-icon class="user-icon" [icon]="faUserCircle"></fa-icon>
+          Hi {{ userName }}
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cart-wishlist p-0 list-item">
+      <button
+        type="button"
+        class="btn btn-dark position-relative"
+        (click)="navigateToCart()"
+      >
+        <fa-icon [icon]="faShoppingCart"></fa-icon>
+        <ng-container *ngIf="cartStore.cart$ | async as cart">
+          <span
+            *ngIf="cart.totalProducts > 0"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
+          >
+            {{ cart.totalProducts }}
+          </span>
+        </ng-container>
+      </button>
+    </div>
+  </div>
+</div> -->
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------------
+  <div class="header bg-dark">
+    <div class="container-fluid py-2 px-3 d-flex flex-wrap justify-content-between align-items-center"> -->
+  
+      <!-- Brand -->
+      <!-- <div class="brand text-white mb-2 mb-md-0">
+        <h1 class="m-0 fs-4">New Green Park</h1>
+      </div> -->
+  
+      <!-- Search Bar -->
+      <!-- <div class="search-wrapper d-flex align-items-center flex-grow-1 mx-2 my-2 my-md-0" *ngIf="displaySearch">
+        <select #categoryOptions class="form-select me-2 category-dropdown">
+          <option *ngFor="let category of categoryStore.topLevelCategories$ | async" [value]="category.id">
+            {{category.category}}
+          </option>
+        </select>
+        <input #keyword type="text" class="form-control me-2" placeholder="Search...">
+        <button class="btn btn-secondary" (click)="onClickSearch(keyword.value, categoryOptions.value)">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
+      </div> -->
+  
+      <!-- Login/Register -->
+      <!-- <div class="login-container d-flex align-items-center text-white mb-2 mb-md-0" *ngIf="!isUserAuthenticated">
+        <fa-icon class="user-icon me-2" [icon]="faUserCircle"></fa-icon>
+        <div>
+          <a routerLink="login">Sign in / Join</a>
+        </div>
+      </div>
+
+      <div class="user-container p-0" *ngIf="isUserAuthenticated">
+      <div class="dropdown user-dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle user-dropdown-button"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <fa-icon class="user-icon" [icon]="faUserCircle"></fa-icon>
+          Hi {{ userName }}
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+   -->
+      <!-- Cart Icon -->
+      <!-- <div class="cart-wishlist p-0 list-item">
+      <button type="button" class="btn btn-dark position-relative"(click)="navigateToCart()">
+        <fa-icon [icon]="faShoppingCart"></fa-icon>
+        <ng-container *ngIf="cartStore.cart$ | async as cart">
+          <span
+            *ngIf="cart.totalProducts > 0"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
+          >
+            {{ cart.totalProducts }}
+          </span>
+        </ng-container>
+      </button>
+    </div>
+    </div>
+  </div> -->
+  <!-- ------------------------------------------------------------------------------------------------------------ -->
+   <div class="header bg-dark">
+  <div class="container-fluid py-2 px-3 d-flex flex-wrap justify-content-between align-items-center">
+
+    <!-- Brand -->
+    <div class="brand text-white">
+      <h1 class="m-0 fs-4">New Green Park</h1>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper d-flex align-items-center mx-2 flex-grow-1" *ngIf="displaySearch">
+      <select #categoryOptions class="form-select me-2 category-dropdown">
+        <option *ngFor="let category of categoryStore.topLevelCategories$ | async" [value]="category.id">
+          {{category.category}}
+        </option>
+      </select>
+      <input #keyword type="text" class="form-control me-2" placeholder="Search...">
+      <button class="btn btn-secondary" (click)="onClickSearch(keyword.value, categoryOptions.value)">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+    </div>
+
+    <!-- User Area -->
+    <div class="user-section d-flex align-items-center">
+
+      <!-- Login/Register -->
+      <div class="login-container text-white me-3" *ngIf="!isUserAuthenticated">
+        <fa-icon class="user-icon me-2" [icon]="faUserCircle"></fa-icon>
+        <a routerLink="login">Login</a>
+      </div>
+
+      <!-- Authenticated User -->
+      <div class="user-container" *ngIf="isUserAuthenticated">
+        <div class="dropdown user-dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle user-dropdown-button"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <fa-icon class="user-icon" [icon]="faUserCircle"></fa-icon>
+            Hi {{ userName || 'User' }}
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="pastOrders()">Past Orders</a></li>
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cart Icon -->
+      <div class="cart-wishlist ms-3">
+        <button type="button" class="btn btn-dark position-relative" (click)="navigateToCart()">
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+          <ng-container *ngIf="cartStore.cart$ | async as cart">
+            <span
+              *ngIf="cart.totalProducts > 0"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark"
+            >
+              {{ cart.totalProducts }}
+            </span>
+          </ng-container>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  

@@ -1,0 +1,18 @@
+<!-- <app-header (searchClicked)="onSearchKeyword($event)"></app-header>
+<app-catnavigation (categoryClicked)="onSelectCategory($event)"></app-catnavigation>
+
+<router-outlet></router-outlet> -->
+
+<div class="home-wrapper">
+  <!-- Fixed Header -->
+  <app-header class="header-fixed" (searchClicked)="onSearchKeyword($event)"></app-header>
+
+  <!-- Fixed Category Navigation (second row) -->
+  <app-catnavigation class="catnav-fixed" (categoryClicked)="onSelectCategory($event)"></app-catnavigation>
+    <!-- Scrollable Product Area -->
+    <div class="product-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+

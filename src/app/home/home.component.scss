@@ -1,0 +1,77 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+app-catnavigation {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.home-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 0; // remove space below
+}
+
+.catnav-fixed {
+  position: sticky;
+  top: 58px; // height of header
+  z-index: 999;
+  background-color: #fff;
+//   border-bottom: 1px solid #ddd;
+  margin-top: 0; // remove space above
+}
+
+.main-layout {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  height: calc(100vh - 108px); // same height minus fixed headers
+  background-color: #f8f9fa;
+}
+
+
+
+/* Works in modern browsers */
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+//   border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: #888;
+//   border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555;
+// }
+
+// /* Firefox */
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: #888 #f1f1f1;
+// }
+
